@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+struct Time {
+    int hours;
+    int minutes;
+};
+
+int main() {
+    struct Time t;
+    int totalMinutes;
+    int *ptr = &totalMinutes;
+
+    printf("Enter total minutes: ");
+    scanf("%d", ptr);
+
+    t.hours = *ptr / 60;
+    t.minutes = *ptr - (t.hours * 60);
+
+    printf("Time = %d hours and %d minutes\n", t.hours, t.minutes);
+
+    return 0;
+}
+
+
+output:
+
+Enter total minutes: 60
+Time = 1 hours and 0 minutes
